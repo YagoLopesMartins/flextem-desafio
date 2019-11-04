@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+ <html lang="pt-br">
+  <head>
+      <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="">
+        <link rel="stylesheet" href="/css/bootstrap.css">
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      <title>Desafio - FlexTem</title>
+   </head>
+ <body>
+  <div class="container mt-4">
+      <h3>Nova Atividade</h3>
+        <div class="card">
+            <div class="card-body">
+                    <form action="/atividade/create" method="POST">
+                        <label for="titulo">Titulo: </label>
+                            <input class="form-control" 
+                                    type="text" id="titulo" name="titulo" 
+                                    placeholder="titulo">
+                        <label for="descricao">Descrição: </label>
+                            <input class="form-control" 
+                                    type="text" id="descricao" name="descricao" 
+                                    placeholder="descricao">
+                        <label for="responsavel">Responsável: </label>
+                            <input class="form-control" 
+                                    type="text" id="responsavel" name="responsavel" 
+                                    placeholder="responsavel">
+                        <select name="responsavel" id="" class="custom-select">
+                            
+                                <option value="{{_id}}"> {{nome}}</option>
+
+                        </select>
+                        <label for="status">Status: </label>
+                            <input class="form-control" 
+                                    type="text" id="status" name="status" 
+                                    placeholder="status">
+
+                        <select name="status" id="" class="custom-select">
+                            
+                                <option value="{{_id}}"> {{nome}}</option>
+                                
+                        </select>
+                        <label for="deadline">Deadline: </label>
+                            <input class="form-control" 
+                                    type="date" id="deadline" name="deadline" 
+                                    placeholder="deadline">
+                        <br>
+                        <button type="submit" class="btn btn-success">Criar Atividade</button>
+                    </form>
+            </div>
+        </div>
+    </div>
+  </body>
+    <script src="/js/bootstrap.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </html>
